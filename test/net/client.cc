@@ -2,7 +2,7 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:12
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-06 22:16:17
+ * @LastEditTime: 2024-07-09 16:05:32
  * @FilePath: /distribute-rasp-scenario/test/net/client.cc
  * @Description:
  */
@@ -11,9 +11,9 @@
 #include <thread>
 
 const int MAX_STORAGE_SIZE = 5;
-const int NORMAL_TRANSMIT_TIME = 2;
-const int RETRANSMIT_THRESHOLD = 2.5 * NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = 2.5 * NORMAL_TRANSMIT_TIME;
+const int NORMAL_TRANSMIT_TIME = 100;
+const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 
 std::unordered_map<std::string, std::list<PacketInfo>> packet_storage;
 std::atomic<int> packet_counter(0);
@@ -25,7 +25,8 @@ static void client(int id)
     void *context = zmq_ctx_new();
     void *client = zmq_socket(context, ZMQ_REQ);
     s_set_id(client); // 设置可打印的身份
-    zmq_connect(client, "tcp://localhost:5672");
+    // s_set_ipv6(client);
+    zmq_connect(client, "tcp://192.168.38.183:5672");
     std::string client_addr = get_identity(client);
 
     while (keep_running)
@@ -97,7 +98,7 @@ int main()
     setup_logging();
 
     std::thread client_thread(client, 1);
-    std::this_thread::sleep_for(std::chrono::minutes(1));
+    std::this_thread::sleep_for(Minutes(10));
 
     keep_running = false;
 
@@ -120,7 +121,7 @@ int main()
 //         threads.emplace_back(client, i + 1);
 //     }
 
-//     std::this_thread::sleep_for(std::chrono::minutes(1));
+//     std::this_thread::sleep_for(Minutes(1));
 
 //     keep_running = false;
 

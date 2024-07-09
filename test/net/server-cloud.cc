@@ -2,16 +2,16 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-06 18:14:52
+ * @LastEditTime: 2024-07-09 17:03:49
  * @FilePath: /distribute-rasp-scenario/test/net/server-cloud.cc
  * @Description:
  */
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 2;
-const int RETRANSMIT_THRESHOLD = 2.5 * NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = 2.5 * NORMAL_TRANSMIT_TIME;
+const int NORMAL_TRANSMIT_TIME = 100;
+const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> sample_storage;
 
@@ -73,10 +73,10 @@ static void edge()
             // }
 
             PacketInfo &packet_info = data_storage[received_packet.client_id][received_packet.packet_id];
-            auto transmission_time = calculate_time(packet_info.send_time, now);
+            auto transmission_time = calculate_time_ms(packet_info.send_time, now);
             if (transmission_time < RETRANSMIT_THRESHOLD)
             {
-                g_logger->info("Edge received on time from {}: {} (complete)", client_addr, packet_info.packet_id);
+                g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular)", client_addr, packet_info.packet_id, get_data_size(packet_info), calculate_time_ms(packet_info.send_time, packet_info.receive_time));
             }
             else
             {
@@ -93,7 +93,7 @@ static void edge()
 
                 send_packet(edge_send, sample_packet);
                 // 处理新批次号的数据包
-                g_logger->info("Edge sent: sample packet {} to cloud", latest_batch_number);
+                g_logger->info("Edge {} sent: sample packet {} to cloud", edge_addr, latest_batch_number);
                 char *reply = s_recv(edge_send);
                 if (reply)
                 {
@@ -130,13 +130,13 @@ static void edge()
             if (sample_storage[received_sample_packet.client_id].find(received_sample_packet.packet_id) == sample_storage[received_sample_packet.client_id].end())
             {
                 std::srand(std::time(nullptr));
-                // 生成 0 到 525 之间的随机毫秒数
-                int randomMilliseconds = std::rand() % 526;
-                std::this_thread::sleep_for(std::chrono::milliseconds(randomMilliseconds));
+                // 生成 0 到 105 之间的随机毫秒数
+                int randomMilliseconds = std::rand() % 106;
+                std::this_thread::sleep_for(Milliseconds(randomMilliseconds));
                 received_sample_packet.receive_time = now;
                 sample_storage[received_sample_packet.client_id][received_sample_packet.packet_id] = received_sample_packet;
             }
-            g_logger->info("Edge received on time from {}: {} (complete)", cloud_addr, received_sample_packet.packet_id);
+            g_logger->info("Edge {} received sample packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular)", edge_addr, cloud_addr, received_sample_packet.packet_id, get_data_size(received_sample_packet), calculate_time_ms(received_sample_packet.send_time, received_sample_packet.receive_time));
             zmq_send_ack(backend, cloud_addr);
         }
     }
@@ -152,7 +152,7 @@ int main()
     setup_logging();
 
     std::thread server_thread(edge);
-    std::this_thread::sleep_for(std::chrono::seconds(90));
+    std::this_thread::sleep_for(Minutes(12));
 
     // 通知服务器线程停止
     keep_running = false;

@@ -1,243 +1,30 @@
-[2024-07-06 21:57:52] [I] - Edge received on time from 8BC1-6700: 1 (complete) - 8619 - 8412
-[2024-07-06 21:57:52] [I] - Edge sent: sample packet 1 to cloud - 8619 - 8412
-[2024-07-06 21:57:52] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:57:53] [I] - Edge received on time from AFE5-AE08: 1 (complete) - 8619 - 8412
-[2024-07-06 21:57:54] [I] - Edge received on time from 8BC1-6700: 2 (complete) - 8619 - 8412
-[2024-07-06 21:57:54] [I] - Edge sent: sample packet 2 to cloud - 8619 - 8412
-[2024-07-06 21:57:54] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:57:55] [I] - Edge received on time from AFE5-AE08: 2 (complete) - 8619 - 8412
-[2024-07-06 21:57:56] [I] - Edge received on time from 8BC1-6700: 3 (complete) - 8619 - 8412
-[2024-07-06 21:57:56] [I] - Edge sent: sample packet 3 to cloud - 8619 - 8412
-[2024-07-06 21:57:56] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:57:57] [I] - Edge received on time from AFE5-AE08: 3 (complete) - 8619 - 8412
-[2024-07-06 21:57:58] [I] - Edge received on time from 8BC1-6700: 4 (complete) - 8619 - 8412
-[2024-07-06 21:57:58] [I] - Edge sent: sample packet 4 to cloud - 8619 - 8412
-[2024-07-06 21:57:58] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:57:58] [I] - Edge received on time from AFE5-AE08: 4 (complete) - 8619 - 8412
-[2024-07-06 21:58:00] [I] - Edge received on time from 8BC1-6700: 5 (complete) - 8619 - 8412
-[2024-07-06 21:58:00] [I] - Edge sent: sample packet 5 to cloud - 8619 - 8412
-[2024-07-06 21:58:00] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:00] [I] - Edge received on time from AFE5-AE08: 5 (complete) - 8619 - 8412
-[2024-07-06 21:58:02] [I] - Edge received on time from 8BC1-6700: 6 (complete) - 8619 - 8412
-[2024-07-06 21:58:02] [I] - Edge sent: sample packet 6 to cloud - 8619 - 8412
-[2024-07-06 21:58:02] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:03] [I] - Edge received on time from AFE5-AE08: 6 (complete) - 8619 - 8412
-[2024-07-06 21:58:04] [I] - Edge received on time from 8BC1-6700: 7 (complete) - 8619 - 8412
-[2024-07-06 21:58:04] [I] - Edge sent: sample packet 7 to cloud - 8619 - 8412
-[2024-07-06 21:58:04] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:05] [I] - Edge received on time from AFE5-AE08: 7 (complete) - 8619 - 8412
-[2024-07-06 21:58:06] [I] - Edge received on time from 8BC1-6700: 8 (complete) - 8619 - 8412
-[2024-07-06 21:58:06] [I] - Edge sent: sample packet 8 to cloud - 8619 - 8412
-[2024-07-06 21:58:06] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:06] [I] - Edge received on time from AFE5-AE08: 8 (complete) - 8619 - 8412
-[2024-07-06 21:58:08] [I] - Edge received on time from 8BC1-6700: 9 (complete) - 8619 - 8412
-[2024-07-06 21:58:08] [I] - Edge sent: sample packet 9 to cloud - 8619 - 8412
-[2024-07-06 21:58:08] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:09] [I] - Edge received on time from AFE5-AE08: 9 (complete) - 8619 - 8412
-[2024-07-06 21:58:10] [I] - Edge received on time from 8BC1-6700: 10 (complete) - 8619 - 8412
-[2024-07-06 21:58:10] [I] - Edge sent: sample packet 10 to cloud - 8619 - 8412
-[2024-07-06 21:58:10] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:10] [I] - Edge received on time from AFE5-AE08: 10 (complete) - 8619 - 8412
-[2024-07-06 21:58:12] [I] - Edge received on time from 8BC1-6700: 11 (complete) - 8619 - 8412
-[2024-07-06 21:58:12] [I] - Edge sent: sample packet 11 to cloud - 8619 - 8412
-[2024-07-06 21:58:12] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:13] [I] - Edge received on time from AFE5-AE08: 11 (complete) - 8619 - 8412
-[2024-07-06 21:58:14] [I] - Edge received on time from 8BC1-6700: 12 (complete) - 8619 - 8412
-[2024-07-06 21:58:14] [I] - Edge sent: sample packet 12 to cloud - 8619 - 8412
-[2024-07-06 21:58:14] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:15] [I] - Edge received on time from AFE5-AE08: 12 (complete) - 8619 - 8412
-[2024-07-06 21:58:16] [I] - Edge received on time from 8BC1-6700: 13 (complete) - 8619 - 8412
-[2024-07-06 21:58:16] [I] - Edge sent: sample packet 13 to cloud - 8619 - 8412
-[2024-07-06 21:58:16] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:17] [I] - Edge received on time from AFE5-AE08: 13 (complete) - 8619 - 8412
-[2024-07-06 21:58:18] [I] - Edge received on time from 8BC1-6700: 14 (complete) - 8619 - 8412
-[2024-07-06 21:58:18] [I] - Edge sent: sample packet 14 to cloud - 8619 - 8412
-[2024-07-06 21:58:18] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:19] [I] - Edge received on time from AFE5-AE08: 14 (complete) - 8619 - 8412
-[2024-07-06 21:58:20] [I] - Edge received on time from 8BC1-6700: 15 (complete) - 8619 - 8412
-[2024-07-06 21:58:20] [I] - Edge sent: sample packet 15 to cloud - 8619 - 8412
-[2024-07-06 21:58:20] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:21] [I] - Edge received on time from AFE5-AE08: 15 (complete) - 8619 - 8412
-[2024-07-06 21:58:22] [I] - Edge received on time from 8BC1-6700: 16 (complete) - 8619 - 8412
-[2024-07-06 21:58:22] [I] - Edge sent: sample packet 16 to cloud - 8619 - 8412
-[2024-07-06 21:58:22] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:22] [I] - Edge received on time from AFE5-AE08: 16 (complete) - 8619 - 8412
-[2024-07-06 21:58:24] [I] - Edge received on time from 8BC1-6700: 17 (complete) - 8619 - 8412
-[2024-07-06 21:58:24] [I] - Edge sent: sample packet 17 to cloud - 8619 - 8412
-[2024-07-06 21:58:24] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:25] [I] - Edge received on time from AFE5-AE08: 17 (complete) - 8619 - 8412
-[2024-07-06 21:58:26] [I] - Edge received on time from 8BC1-6700: 18 (complete) - 8619 - 8412
-[2024-07-06 21:58:26] [I] - Edge sent: sample packet 18 to cloud - 8619 - 8412
-[2024-07-06 21:58:26] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:27] [I] - Edge received on time from AFE5-AE08: 18 (complete) - 8619 - 8412
-[2024-07-06 21:58:28] [I] - Edge received on time from 8BC1-6700: 19 (complete) - 8619 - 8412
-[2024-07-06 21:58:28] [I] - Edge sent: sample packet 19 to cloud - 8619 - 8412
-[2024-07-06 21:58:28] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:28] [I] - Edge received on time from AFE5-AE08: 19 (complete) - 8619 - 8412
-[2024-07-06 21:58:30] [I] - Edge received on time from 8BC1-6700: 20 (complete) - 8619 - 8412
-[2024-07-06 21:58:30] [I] - Edge sent: sample packet 20 to cloud - 8619 - 8412
-[2024-07-06 21:58:30] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:31] [I] - Edge received on time from AFE5-AE08: 20 (complete) - 8619 - 8412
-[2024-07-06 21:58:32] [I] - Edge received on time from 8BC1-6700: 21 (complete) - 8619 - 8412
-[2024-07-06 21:58:32] [I] - Edge sent: sample packet 21 to cloud - 8619 - 8412
-[2024-07-06 21:58:32] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:33] [I] - Edge received on time from AFE5-AE08: 21 (complete) - 8619 - 8412
-[2024-07-06 21:58:34] [I] - Edge received on time from 8BC1-6700: 22 (complete) - 8619 - 8412
-[2024-07-06 21:58:34] [I] - Edge sent: sample packet 22 to cloud - 8619 - 8412
-[2024-07-06 21:58:34] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:34] [I] - Edge received on time from AFE5-AE08: 22 (complete) - 8619 - 8412
-[2024-07-06 21:58:36] [I] - Edge received on time from 8BC1-6700: 23 (complete) - 8619 - 8412
-[2024-07-06 21:58:36] [I] - Edge sent: sample packet 23 to cloud - 8619 - 8412
-[2024-07-06 21:58:36] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:37] [I] - Edge received on time from AFE5-AE08: 23 (complete) - 8619 - 8412
-[2024-07-06 21:58:38] [I] - Edge received on time from 8BC1-6700: 24 (complete) - 8619 - 8412
-[2024-07-06 21:58:38] [I] - Edge sent: sample packet 24 to cloud - 8619 - 8412
-[2024-07-06 21:58:38] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:39] [I] - Edge received on time from AFE5-AE08: 24 (complete) - 8619 - 8412
-[2024-07-06 21:58:40] [I] - Edge received on time from 8BC1-6700: 25 (complete) - 8619 - 8412
-[2024-07-06 21:58:40] [I] - Edge sent[2024-07-06 21:57:52] [I] - Client 8BC1-6700 sent: packet 1 - 9138 - 9123
-[2024-07-06 21:57:52] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:57:54] [I] - Client 8BC1-6700 sent: packet 2 - 9138 - 9123
-[2024-07-06 21:57:54] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:57:56] [I] - Client 8BC1-6700 sent: packet 3 - 9138 - 9123
-[2024-07-06 21:57:56] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:57:58] [I] - Client 8BC1-6700 sent: packet 4 - 9138 - 9123
-[2024-07-06 21:57:58] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:00] [I] - Client 8BC1-6700 sent: packet 5 - 9138 - 9123
-[2024-07-06 21:58:00] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:02] [I] - Client 8BC1-6700 sent: packet 6 - 9138 - 9123
-[2024-07-06 21:58:02] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:04] [I] - Client 8BC1-6700 sent: packet 7 - 9138 - 9123
-[2024-07-06 21:58:04] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:06] [I] - Client 8BC1-6700 sent: packet 8 - 9138 - 9123
-[2024-07-06 21:58:06] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:08] [I] - Client 8BC1-6700 sent: packet 9 - 9138 - 9123
-[2024-07-06 21:58:08] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:10] [I] - Client 8BC1-6700 sent: packet 10 - 9138 - 9123
-[2024-07-06 21:58:10] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:12] [I] - Client 8BC1-6700 sent: packet 11 - 9138 - 9123
-[2024-07-06 21:58:12] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:14] [I] - Client 8BC1-6700 sent: packet 12 - 9138 - 9123
-[2024-07-06 21:58:14] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:16] [I] - Client 8BC1-6700 sent: packet 13 - 9138 - 9123
-[2024-07-06 21:58:16] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:18] [I] - Client 8BC1-6700 sent: packet 14 - 9138 - 9123
-[2024-07-06 21:58:18] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:20] [I] - Client 8BC1-6700 sent: packet 15 - 9138 - 9123
-[2024-07-06 21:58:20] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:22] [I] - Client 8BC1-6700 sent: packet 16 - 9138 - 9123
-[2024-07-06 21:58:22] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:24] [I] - Client 8BC1-6700 sent: packet 17 - 9138 - 9123
-[2024-07-06 21:58:24] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:26] [I] - Client 8BC1-6700 sent: packet 18 - 9138 - 9123
-[2024-07-06 21:58:26] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:28] [I] - Client 8BC1-6700 sent: packet 19 - 9138 - 9123
-[2024-07-06 21:58:28] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:30] [I] - Client 8BC1-6700 sent: packet 20 - 9138 - 9123
-[2024-07-06 21:58:30] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:32] [I] - Client 8BC1-6700 sent: packet 21 - 9138 - 9123
-[2024-07-06 21:58:32] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:34] [I] - Client 8BC1-6700 sent: packet 22 - 9138 - 9123
-[2024-07-06 21:58:34] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:36] [I] - Client 8BC1-6700 sent: packet 23 - 9138 - 9123
-[2024-07-06 21:58:36] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:38] [I] - Client 8BC1-6700 sent: packet 24 - 9138 - 9123
-[2024-07-06 21:58:38] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:40] [I] - Client 8BC1-6700 sent: packet 25 - 9138 - 9123
-[2024-07-06 21:58:40] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:42] [I] - Client 8BC1-6700 sent: packet 26 - 9138 - 9123
-[2024-07-06 21:58:42] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:44] [I] - Client 8BC1-6700 sent: packet 27 - 9138 - 9123
-[2024-07-06 21:58:44] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:46] [I] - Client 8BC1-6700 sent: packet 28 - 9138 - 9123
-[2024-07-06 21:58:46] [I] - Client 8BC1-6700 received: OK - 9[2024-07-06 21:57:52] [I] - Cloud AFE5-AE08 sent: packet 1 - 8730 - 8725
-[2024-07-06 21:57:53] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:57:54] [I] - Cloud AFE5-AE08 sent: packet 2 - 8730 - 8725
-[2024-07-06 21:57:55] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:57:56] [I] - Cloud AFE5-AE08 sent: packet 3 - 8730 - 8725
-[2024-07-06 21:57:57] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:57:58] [I] - Cloud AFE5-AE08 sent: packet 4 - 8730 - 8725
-[2024-07-06 21:57:58] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:00] [I] - Cloud AFE5-AE08 sent: packet 5 - 8730 - 8725
-[2024-07-06 21:58:00] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:03] [I] - Cloud AFE5-AE08 sent: packet 6 - 8730 - 8725
-[2024-07-06 21:58:03] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:04] [I] - Cloud AFE5-AE08 sent: packet 7 - 8730 - 8725
-[2024-07-06 21:58:05] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:06] [I] - Cloud AFE5-AE08 sent: packet 8 - 8730 - 8725
-[2024-07-06 21:58:06] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:09] [I] - Cloud AFE5-AE08 sent: packet 9 - 8730 - 8725
-[2024-07-06 21:58:09] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:10] [I] - Cloud AFE5-AE08 sent: packet 10 - 8730 - 8725
-[2024-07-06 21:58:10] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:12] [I] - Cloud AFE5-AE08 sent: packet 11 - 8730 - 8725
-[2024-07-06 21:58:13] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:14] [I] - Cloud AFE5-AE08 sent: packet 12 - 8730 - 8725
-[2024-07-06 21:58:15] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:17] [I] - Cloud AFE5-AE08 sent: packet 13 - 8730 - 8725
-[2024-07-06 21:58:17] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:18] [I] - Cloud AFE5-AE08 sent: packet 14 - 8730 - 8725
-[2024-07-06 21:58:19] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:21] [I] - Cloud AFE5-AE08 sent: packet 15 - 8730 - 8725
-[2024-07-06 21:58:21] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:22] [I] - Cloud AFE5-AE08 sent: packet 16 - 8730 - 8725
-[2024-07-06 21:58:22] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:25] [I] - Cloud AFE5-AE08 sent: packet 17 - 8730 - 8725
-[2024-07-06 21:58:25] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:27] [I] - Cloud AFE5-AE08 sent: packet 18 - 8730 - 8725
-[2024-07-06 21:58:27] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:28] [I] - Cloud AFE5-AE08 sent: packet 19 - 8730 - 8725
-[2024-07-06 21:58:28] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:31] [I] - Cloud AFE5-AE08 sent: packet 20 - 8730 - 8725
-[2024-07-06 21:58:31] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:33] [I] - Cloud AFE5-AE08 sent: packet 21 - 8730 - 8725
-[2024-07-06 21:58:33] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:34] [I] - Cloud AFE5-AE08 sent: packet 22 - 8730 - 8725
-[2024-07-06 21:58:34] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:36] [I] - Cloud AFE5-AE08 sent: packet 23 - 8730 - 8725
-[2024-07-06 21:58:37] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:39] [I] - Cloud AFE5-AE08 sent: packet 24 - 8730 - 8725
-[2024-07-06 21:58:39] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:41] [I] - Cloud AFE5-AE08 sent: packet 25 - 8730 - 8725
-[2024-07-06 21:58:41] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:43] [I] - Cloud AFE5-AE08 sent: packet 26 - 8730 - 8725
-[2024-07-06 21:58:43] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:45] [I] - Cloud AFE5-AE08 sent: packet 27 - 8730 - 8725
-[2024-07-06 21:58:45] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:46] [I] - Cloud AFE5-AE08 sent: packet 28 - 8730 - 8725
-[2024-07-06 21:58:47] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:49] [I] - Cloud AFE5-AE08 s138 - 9123
-[2024-07-06 21:58:48] [I] - Client 8BC1-6700 sent: packet 29 - 9138 - 9123
-[2024-07-06 21:58:48] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:50] [I] - Client 8BC1-6700 sent: packet 30 - 9138 - 9123
-[2024-07-06 21:58:50] [I] - Client 8BC1-6700 received: OK - 9138 - 9123
-[2024-07-06 21:58:52] [I] - Client 8BC1-6700 sent 30 packets in total - 9138 - 9123
-: sample packet 25 to cloud - 8619 - 8412
-[2024-07-06 21:58:40] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:41] [I] - Edge received on time from AFE5-AE08: 25 (complete) - 8619 - 8412
-[2024-07-06 21:58:42] [I] - Edge received on time from 8BC1-6700: 26 (complete) - 8619 - 8412
-[2024-07-06 21:58:42] [I] - Edge sent: sample packet 26 to cloud - 8619 - 8412
-[2024-07-06 21:58:42] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:43] [I] - Edge received on time from AFE5-AE08: 26 (complete) - 8619 - 8412
-[2024-07-06 21:58:44] [I] - Edge received on time from 8BC1-6700: 27 (complete) - 8619 - 8412
-[2024-07-06 21:58:44] [I] - Edge sent: sample packet 27 to cloud - 8619 - 8412
-[2024-07-06 21:58:44] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:45] [I] - Edge received on time from AFE5-AE08: 27 (complete) - 8619 - 8412
-[2024-07-06 21:58:46] [I] - Edge received on time from 8BC1-6700: 28 (complete) - 8619 - 8412
-[2024-07-06 21:58:46] [I] - Edge sent: sample packet 28 to cloud - 8619 - 8412
-[2024-07-06 21:58:46] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:47] [I] - Edge received on time from AFE5-AE08: 28 (complete) - 8619 - 8412
-[2024-07-06 21:58:48] [I] - Edge received on time from 8BC1-6700: 29 (complete) - 8619 - 8412
-[2024-07-06 21:58:48] [I] - Edge sent: sample packet 29 to cloud - 8619 - 8412
-[2024-07-06 21:58:48] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:49] [I] - Edge received on time from AFE5-AE08: 29 (complete) - 8619 - 8412
-[2024-07-06 21:58:50] [I] - Edge received on time from 8BC1-6700: 30 (complete) - 8619 - 8412
-[2024-07-06 21:58:50] [I] - Edge sent: sample packet 30 to cloud - 8619 - 8412
-[2024-07-06 21:58:50] [I] - Edge 86FE-5A13 received: OK - 8619 - 8412
-[2024-07-06 21:58:51] [I] - Edge received on time from AFE5-AE08: 30 (complete) - 8619 - 8412
-[2024-07-06 21:59:13] [I] - Data exported successfully to received_packets_data.csv - 8412 - 8412
-[2024-07-06 21:59:13] [I] - Data exported successfully to received_sample_packets_data.csv - 8412 - 8412
-ent: packet 29 - 8730 - 8725
-[2024-07-06 21:58:49] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
-[2024-07-06 21:58:51] [I] - Cloud AFE5-AE08 sent: packet 30 - 8730 - 8725
-[2024-07-06 21:58:51] [I] - Cloud AFE5-AE08 received: OK - 8730 - 8725
+[2024-07-09 16:53:22] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 1 - 70704 - 70695
+[2024-07-09 16:53:22] [I] - Edge received packet on time from 01FE-6E09: 1, packet size: 18KB,transmission time: 141ms (retransmit) - 70704 - 70695
+[2024-07-09 16:53:24] [I] - Edge received packet on time from 01FE-6E09: 2, packet size: 5KB,transmission time: 81ms (regular) - 70704 - 70695
+[2024-07-09 16:53:26] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 3 - 70704 - 70695
+[2024-07-09 16:53:26] [I] - Edge received packet on time from 01FE-6E09: 3, packet size: 2KB,transmission time: 140ms (retransmit) - 70704 - 70695
+[2024-07-09 16:53:28] [I] - Edge received packet on time from 01FE-6E09: 4, packet size: 15KB,transmission time: 40ms (regular) - 70704 - 70695
+[2024-07-09 16:53:30] [I] - Edge received packet on time from 01FE-6E09: 5, packet size: 16KB,transmission time: 25ms (regular) - 70704 - 70695
+[2024-07-09 16:53:32] [I] - Edge received packet on time from 01FE-6E09: 6, packet size: 4KB,transmission time: 22ms (regular) - 70704 - 70695
+[2024-07-09 16:53:34] [I] - Edge received packet on time from 01FE-6E09: 7, packet size: 7KB,transmission time: 28ms (regular) - 70704 - 70695
+[2024-07-09 16:53:36] [I] - Edge received packet on time from 01FE-6E09: 8, packet size: 19KB,transmission time: 39ms (regular) - 70704 - 70695
+[2024-07-09 16:53:38] [I] - Edge received packet on time from 01FE-6E09: 9, packet size: 9KB,transmission time: 24ms (regular) - 70704 - 70695
+[2024-07-09 16:53:40] [I] - Edge received packet on time from 01FE-6E09: 10, packet size: 10KB,transmission time: 32ms (regular) - 70704 - 70695
+[2024-07-09 16:53:42] [I] - Edge received packet on time from 01FE-6E09: 11, packet size: 1KB,transmission time: 34ms (regular) - 70704 - 70695
+[2024-07-09 16:53:45] [I] - Edge received packet on time from 01FE-6E09: 12, packet size: 19KB,transmission time: 46ms (regular) - 70704 - 70695
+[2024-07-09 16:53:47] [I] - Edge received packet on time from 01FE-6E09: 13, packet size: 2KB,transmission time: 13ms (regular) - 70704 - 70695
+[2024-07-09 16:53:49] [I] - Edge received packet on time from 01FE-6E09: 14, packet size: 8KB,transmission time: 33ms (regular) - 70704 - 70695
+[2024-07-09 16:53:51] [I] - Edge received packet on time from 01FE-6E09: 15, packet size: 10KB,transmission time: 30ms (regular) - 70704 - 70695
+[2024-07-09 16:53:53] [I] - Edge received packet on time from 01FE-6E09: 16, packet size: 12KB,transmission time: 31ms (regular) - 70704 - 70695
+[2024-07-09 16:53:55] [I] - Edge received packet on time from 01FE-6E09: 17, packet size: 13KB,transmission time: 29ms (regular) - 70704 - 70695
+[2024-07-09 16:53:57] [I] - Edge received packet on time from 01FE-6E09: 18, packet size: 11KB,transmission time: 30ms (regular) - 70704 - 70695
+[2024-07-09 16:53:59] [I] - Edge received packet on time from 01FE-6E09: 19, packet size: 4KB,transmission time: 32ms (regular) - 70704 - 70695
+[2024-07-09 16:54:01] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 20 - 70704 - 70695
+[2024-07-09 16:54:01] [I] - Edge received packet on time from 01FE-6E09: 20, packet size: 18KB,transmission time: 162ms (retransmit) - 70704 - 70695
+[2024-07-09 16:54:03] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 21 - 70704 - 70695
+[2024-07-09 16:54:03] [I] - Edge received packet on time from 01FE-6E09: 21, packet size: 12KB,transmission time: 113ms (retransmit) - 70704 - 70695
+[2024-07-09 16:54:05] [I] - Edge received packet on time from 01FE-6E09: 22, packet size: 10KB,transmission time: 19ms (regular) - 70704 - 70695
+[2024-07-09 16:54:07] [I] - Edge received packet on time from 01FE-6E09: 23, packet size: 1KB,transmission time: 31ms (regular) - 70704 - 70695
+[2024-07-09 16:54:09] [I] - Edge received packet on time from 01FE-6E09: 24, packet size: 15KB,transmission time: 39ms (regular) - 70704 - 70695
+[2024-07-09 16:54:11] [I] - Edge received packet on time from 01FE-6E09: 25, packet size: 19KB,transmission time: 28ms (regular) - 70704 - 70695
+[2024-07-09 16:54:13] [I] - Edge received pa

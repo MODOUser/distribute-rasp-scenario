@@ -2,16 +2,16 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-06 18:15:03
+ * @LastEditTime: 2024-07-09 16:08:16
  * @FilePath: /distribute-rasp-scenario/test/net/cloud.cc
  * @Description:
  */
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 2;
-const int RETRANSMIT_THRESHOLD = 2.5 * NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = 2.5 * NORMAL_TRANSMIT_TIME;
+const int NORMAL_TRANSMIT_TIME = 100;
+const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 
 std::atomic<bool> keep_running(true);
 
@@ -49,12 +49,12 @@ static void cloud()
             zmq_send_ack(cloud, edge_addr);
 
             std::srand(std::time(nullptr));
-            // 生成 0 到 525 之间的随机毫秒数
-            int randomMilliseconds = std::rand() % 526;
-            std::this_thread::sleep_for(std::chrono::milliseconds(randomMilliseconds));
+            // 生成 0 到 105 之间的随机毫秒数
+            int randomMilliseconds = std::rand() % 106;
+            std::this_thread::sleep_for(Milliseconds(randomMilliseconds));
 
             send_packet(cloud_send, received_packet);
-            g_logger->info("Cloud {} sent: packet {}", cloud_addr, received_packet.packet_id);
+            g_logger->info("Cloud {} sent: sample packet {}", cloud_addr, received_packet.packet_id);
 
             //
             // if (received_hash != calculated_hash)
@@ -89,7 +89,7 @@ int main()
     setup_logging();
 
     std::thread cloud_thread(cloud);
-    std::this_thread::sleep_for(std::chrono::seconds(90));
+    std::this_thread::sleep_for(Minutes(12));
 
     // 通知云端线程停止
     keep_running = false;

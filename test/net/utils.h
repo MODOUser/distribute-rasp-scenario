@@ -11,11 +11,16 @@
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <fstream>
+#include <curl/curl.h>
+#include <array>
+#include <regex>
+#include <cmath>
 
 std::shared_ptr<spdlog::logger> g_logger;
 
 using Clock = std::chrono::system_clock;
 using TimePoint = Clock::time_point;
+using Minutes = std::chrono::minutes;
 using Seconds = std::chrono::seconds;
 using Milliseconds = std::chrono::milliseconds;
 
@@ -125,6 +130,10 @@ int calculate_time(const TimePoint &start_time, const TimePoint &end_time)
 {
     return std::chrono::duration_cast<Seconds>(end_time - start_time).count();
 }
+int calculate_time_ms(const TimePoint &start_time, const TimePoint &end_time)
+{
+    return std::chrono::duration_cast<Milliseconds>(end_time - start_time).count();
+}
 
 std::string calculate_sha256(const std::string &data)
 {
@@ -165,7 +174,7 @@ void setup_logging()
     g_logger->set_level(spdlog::level::trace);
 
     // 设置自动刷新
-    spdlog::flush_every(std::chrono::seconds(3));
+    spdlog::flush_every(Seconds(3));
 }
 
 void export_data_to_csv(const std::string &filename, std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage)
@@ -187,8 +196,8 @@ void export_data_to_csv(const std::string &filename, std::unordered_map<std::str
         for (const auto &packet_entry : client_entry.second)
         {
             const PacketInfo &packet_info = packet_entry.second;
-            auto send_ms = std::chrono::duration_cast<std::chrono::milliseconds>(packet_info.send_time.time_since_epoch()).count();
-            auto receive_ms = std::chrono::duration_cast<std::chrono::milliseconds>(packet_info.receive_time.time_since_epoch()).count();
+            auto send_ms = std::chrono::duration_cast<Milliseconds>(packet_info.send_time.time_since_epoch()).count();
+            auto receive_ms = std::chrono::duration_cast<Milliseconds>(packet_info.receive_time.time_since_epoch()).count();
             int data_size = packet_info.data.size();
             bool retransmitted = packet_info.retransmitted;
 
@@ -201,4 +210,71 @@ void export_data_to_csv(const std::string &filename, std::unordered_map<std::str
 
     csv_file.close();
     g_logger->info("Data exported successfully to {}", filename);
+}
+
+static size_t write_callback(void *contents, size_t size, size_t nmemb, void *userp)
+{
+    ((std::string *)userp)->append((char *)contents, size * nmemb);
+    return size * nmemb;
+}
+
+std::string get_public_ip()
+{
+    CURL *curl;
+    CURLcode res;
+    std::string readBuffer;
+    curl = curl_easy_init();
+    if (curl)
+    {
+        curl_easy_setopt(curl, CURLOPT_URL, "https://api.ipify.org");
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
+        res = curl_easy_perform(curl);
+        curl_easy_cleanup(curl);
+
+        if (res != CURLE_OK)
+        {
+            std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(res) << std::endl;
+            return "";
+        }
+    }
+    return readBuffer;
+}
+
+std::string exec_command(const char *cmd)
+{
+    std::array<char, 128> buffer;
+    std::string result;
+    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+    if (!pipe)
+    {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr)
+    {
+        result += buffer.data();
+    }
+    return result;
+}
+
+std::string get_public_ipv6_ip()
+{
+    std::string ipCommandOutput = exec_command("ip -6 addr show scope global");
+    std::regex ipv6Regex("inet6 ([0-9a-fA-F:]+)/\\d{1,3} scope global");
+    std::smatch match;
+    if (std::regex_search(ipCommandOutput, match, ipv6Regex) && match.size() > 1)
+    {
+        return match[1].str(); // 返回第一个匹配的IPv6地址
+    }
+    return "No public IPv6 address found";
+}
+
+double get_data_size(const PacketInfo &packet)
+{
+    // 获取数据向量的大小（字节）
+    size_t size_in_bytes = packet.data.size();
+
+    // 转换为千字节 (KB) 并且直接保留两位小数
+    double size_in_KB = size_in_bytes / 1024.0;
+    return std::round(size_in_KB * 100.0) / 100.0;
 }

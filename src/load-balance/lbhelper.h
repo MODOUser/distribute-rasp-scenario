@@ -24,6 +24,13 @@
 #include "./../thread-pool/thread-pool.h"
 #include "./../ftp/file-transfer.h"
 #define randof(num) (int)((float)(num) * random() / (RAND_MAX + 1.0))
+
+static void s_set_ipv6(void *socket)
+{
+    int opt = 1;
+    zmq_setsockopt(socket, ZMQ_IPV6, &opt, sizeof(opt));
+}
+
 static void s_set_id(void *socket)
 {
     static std::random_device rd;                          // 非确定性随机数生成器

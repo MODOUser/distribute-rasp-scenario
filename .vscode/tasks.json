@@ -16,7 +16,8 @@
                 "-lssl",
                 "-lcrypto",
                 "-lspdlog",
-                "-lfmt"
+                "-lfmt",
+                "-lcurl"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
