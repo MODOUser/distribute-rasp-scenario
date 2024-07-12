@@ -67,6 +67,17 @@ PacketInfo deserialize(const std::string &serialized)
     return {packet_id, client_id, send_time, {}, data, retransmitted};
 }
 
+std::string TimePoint_to_timestamp(const TimePoint &tp)
+{
+    // 将时间点转换为毫秒级的时间戳
+    auto milliseconds = std::chrono::duration_cast<Milliseconds>(
+                            tp.time_since_epoch())
+                            .count();
+
+    // 将毫秒时间戳转换为字符串
+    return std::to_string(milliseconds);
+}
+
 void fill_random_data(std::vector<char> &data)
 {
     static const char charset[] =
@@ -277,15 +288,4 @@ double get_data_size(const PacketInfo &packet)
     // 转换为千字节 (KB) 并且直接保留两位小数
     double size_in_KB = size_in_bytes / 1024.0;
     return std::round(size_in_KB * 100.0) / 100.0;
-}
-
-std::string TimePoint_to_timestamp(const TimePoint &tp)
-{
-    // 将时间点转换为毫秒级的时间戳
-    auto milliseconds = std::chrono::duration_cast<Milliseconds>(
-                            tp.time_since_epoch())
-                            .count();
-
-    // 将毫秒时间戳转换为字符串
-    return std::to_string(milliseconds);
 }
