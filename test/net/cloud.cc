@@ -2,7 +2,7 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-12 09:56:40
+ * @LastEditTime: 2024-07-12 10:23:03
  * @FilePath: /distribute-rasp-scenario/test/net/cloud.cc
  * @Description:
  */
@@ -10,8 +10,8 @@
 #include "utils.h"
 
 const int NORMAL_TRANSMIT_TIME = 1000;
-const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 
 std::atomic<bool> keep_running(true);
 

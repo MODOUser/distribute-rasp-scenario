@@ -2,7 +2,7 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:12
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-12 09:54:13
+ * @LastEditTime: 2024-07-12 10:27:58
  * @FilePath: /distribute-rasp-scenario/test/net/client-cloud.cc
  * @Description:
  */
@@ -12,8 +12,8 @@
 
 const int MAX_STORAGE_SIZE = 5;
 const int NORMAL_TRANSMIT_TIME = 1000;
-const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 
 std::unordered_map<std::string, std::list<PacketInfo>> packet_storage;
 std::atomic<int> packet_counter(0);
@@ -84,7 +84,7 @@ static void client(int id)
         {
             g_logger->error("Client {} failed to receive reply", client_addr);
         }
-        sleep(2);
+        sleep(1);
     }
     g_logger->info("Client {} sent {} packets in total", client_addr, packet_counter);
     zmq_close(client);

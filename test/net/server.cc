@@ -10,8 +10,8 @@
 #include "utils.h"
 
 const int NORMAL_TRANSMIT_TIME = 1000;
-const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage;
 
 std::atomic<bool> keep_running(true);

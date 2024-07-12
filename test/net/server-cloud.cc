@@ -2,7 +2,7 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-12 09:58:02
+ * @LastEditTime: 2024-07-12 10:38:51
  * @FilePath: /distribute-rasp-scenario/test/net/server-cloud.cc
  * @Description:
  */
@@ -10,8 +10,8 @@
 #include "utils.h"
 
 const int NORMAL_TRANSMIT_TIME = 1000;
-const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> sample_storage;
 
@@ -73,7 +73,7 @@ static void edge()
             // }
 
             PacketInfo &packet_info = data_storage[received_packet.client_id][received_packet.packet_id];
-            auto transmission_time = calculate_time_ms(packet_info.send_time, now);
+            auto transmission_time = calculate_time_ms(packet_info.send_time, packet_info.receive_time);
             if (transmission_time < RETRANSMIT_THRESHOLD)
             {
                 g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular)", client_addr, packet_info.packet_id, get_data_size(packet_info), calculate_time_ms(packet_info.send_time, packet_info.receive_time));
