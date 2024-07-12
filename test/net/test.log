@@ -1,30 +1,159 @@
-[2024-07-09 16:53:22] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 1 - 70704 - 70695
-[2024-07-09 16:53:22] [I] - Edge received packet on time from 01FE-6E09: 1, packet size: 18KB,transmission time: 141ms (retransmit) - 70704 - 70695
-[2024-07-09 16:53:24] [I] - Edge received packet on time from 01FE-6E09: 2, packet size: 5KB,transmission time: 81ms (regular) - 70704 - 70695
-[2024-07-09 16:53:26] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 3 - 70704 - 70695
-[2024-07-09 16:53:26] [I] - Edge received packet on time from 01FE-6E09: 3, packet size: 2KB,transmission time: 140ms (retransmit) - 70704 - 70695
-[2024-07-09 16:53:28] [I] - Edge received packet on time from 01FE-6E09: 4, packet size: 15KB,transmission time: 40ms (regular) - 70704 - 70695
-[2024-07-09 16:53:30] [I] - Edge received packet on time from 01FE-6E09: 5, packet size: 16KB,transmission time: 25ms (regular) - 70704 - 70695
-[2024-07-09 16:53:32] [I] - Edge received packet on time from 01FE-6E09: 6, packet size: 4KB,transmission time: 22ms (regular) - 70704 - 70695
-[2024-07-09 16:53:34] [I] - Edge received packet on time from 01FE-6E09: 7, packet size: 7KB,transmission time: 28ms (regular) - 70704 - 70695
-[2024-07-09 16:53:36] [I] - Edge received packet on time from 01FE-6E09: 8, packet size: 19KB,transmission time: 39ms (regular) - 70704 - 70695
-[2024-07-09 16:53:38] [I] - Edge received packet on time from 01FE-6E09: 9, packet size: 9KB,transmission time: 24ms (regular) - 70704 - 70695
-[2024-07-09 16:53:40] [I] - Edge received packet on time from 01FE-6E09: 10, packet size: 10KB,transmission time: 32ms (regular) - 70704 - 70695
-[2024-07-09 16:53:42] [I] - Edge received packet on time from 01FE-6E09: 11, packet size: 1KB,transmission time: 34ms (regular) - 70704 - 70695
-[2024-07-09 16:53:45] [I] - Edge received packet on time from 01FE-6E09: 12, packet size: 19KB,transmission time: 46ms (regular) - 70704 - 70695
-[2024-07-09 16:53:47] [I] - Edge received packet on time from 01FE-6E09: 13, packet size: 2KB,transmission time: 13ms (regular) - 70704 - 70695
-[2024-07-09 16:53:49] [I] - Edge received packet on time from 01FE-6E09: 14, packet size: 8KB,transmission time: 33ms (regular) - 70704 - 70695
-[2024-07-09 16:53:51] [I] - Edge received packet on time from 01FE-6E09: 15, packet size: 10KB,transmission time: 30ms (regular) - 70704 - 70695
-[2024-07-09 16:53:53] [I] - Edge received packet on time from 01FE-6E09: 16, packet size: 12KB,transmission time: 31ms (regular) - 70704 - 70695
-[2024-07-09 16:53:55] [I] - Edge received packet on time from 01FE-6E09: 17, packet size: 13KB,transmission time: 29ms (regular) - 70704 - 70695
-[2024-07-09 16:53:57] [I] - Edge received packet on time from 01FE-6E09: 18, packet size: 11KB,transmission time: 30ms (regular) - 70704 - 70695
-[2024-07-09 16:53:59] [I] - Edge received packet on time from 01FE-6E09: 19, packet size: 4KB,transmission time: 32ms (regular) - 70704 - 70695
-[2024-07-09 16:54:01] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 20 - 70704 - 70695
-[2024-07-09 16:54:01] [I] - Edge received packet on time from 01FE-6E09: 20, packet size: 18KB,transmission time: 162ms (retransmit) - 70704 - 70695
-[2024-07-09 16:54:03] [W] - Edge received timeout, requesting retransmit from 01FE-6E09: 21 - 70704 - 70695
-[2024-07-09 16:54:03] [I] - Edge received packet on time from 01FE-6E09: 21, packet size: 12KB,transmission time: 113ms (retransmit) - 70704 - 70695
-[2024-07-09 16:54:05] [I] - Edge received packet on time from 01FE-6E09: 22, packet size: 10KB,transmission time: 19ms (regular) - 70704 - 70695
-[2024-07-09 16:54:07] [I] - Edge received packet on time from 01FE-6E09: 23, packet size: 1KB,transmission time: 31ms (regular) - 70704 - 70695
-[2024-07-09 16:54:09] [I] - Edge received packet on time from 01FE-6E09: 24, packet size: 15KB,transmission time: 39ms (regular) - 70704 - 70695
-[2024-07-09 16:54:11] [I] - Edge received packet on time from 01FE-6E09: 25, packet size: 19KB,transmission time: 28ms (regular) - 70704 - 70695
-[2024-07-09 16:54:13] [I] - Edge received pa
+[2024-07-10 22:26:32] [I] - Edge received packet on time from 9B96-FB17: 1, packet size: 18KB, transmission time: 527ms (regular) - 50456 - 50447
+[2024-07-10 22:26:34] [I] - Edge received packet on time from 9B96-FB17: 2, packet size: 5KB, transmission time: 543ms (regular) - 50456 - 50447
+[2024-07-10 22:26:36] [I] - Edge received packet on time from 9B96-FB17: 3, packet size: 2KB, transmission time: 407ms (regular) - 50456 - 50447
+[2024-07-10 22:26:38] [I] - Edge received packet on time from 9B96-FB17: 4, packet size: 15KB, transmission time: 464ms (regular) - 50456 - 50447
+[2024-07-10 22:26:41] [I] - Edge received packet on time from 9B96-FB17: 5, packet size: 16KB, transmission time: 577ms (regular) - 50456 - 50447
+[2024-07-10 22:26:43] [I] - Edge received packet on time from 9B96-FB17: 6, packet size: 4KB, transmission time: 501ms (regular) - 50456 - 50447
+[2024-07-10 22:26:45] [I] - Edge received packet on time from 9B96-FB17: 7, packet size: 7KB, transmission time: 472ms (regular) - 50456 - 50447
+[2024-07-10 22:26:47] [I] - Edge received packet on time from 9B96-FB17: 8, packet size: 19KB, transmission time: 592ms (regular) - 50456 - 50447
+[2024-07-10 22:26:49] [I] - Edge received packet on time from 9B96-FB17: 9, packet size: 9KB, transmission time: 567ms (regular) - 50456 - 50447
+[2024-07-10 22:26:52] [I] - Edge received packet on time from 9B96-FB17: 10, packet size: 10KB, transmission time: 450ms (regular) - 50456 - 50447
+[2024-07-10 22:26:54] [I] - Edge received packet on time from 9B96-FB17: 11, packet size: 1KB, transmission time: 558ms (regular) - 50456 - 50447
+[2024-07-10 22:26:56] [I] - Edge received packet on time from 9B96-FB17: 12, packet size: 19KB, transmission time: 453ms (regular) - 50456 - 50447
+[2024-07-10 22:26:58] [I] - Edge received packet on time from 9B96-FB17: 13, packet size: 2KB, transmission time: 535ms (regular) - 50456 - 50447
+[2024-07-10 22:27:01] [I] - Edge received packet on time from 9B96-FB17: 14, packet size: 8KB, transmission time: 911ms (regular) - 50456 - 50447
+[2024-07-10 22:27:03] [I] - Edge received packet on time from 9B96-FB17: 15, packet size: 10KB, transmission time: 444ms (regular) - 50456 - 50447
+[2024-07-10 22:27:08] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 16, transmission time: 3907ms - 50456 - 50447
+[2024-07-10 22:27:12] [W] - Retransmit packet lost for 9B96-FB17: 16 - 50456 - 50447
+[2024-07-10 22:27:35] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 17, transmission time: 21505ms - 50456 - 50447
+[2024-07-10 22:27:35] [W] - Retransmit packet lost for 9B96-FB17: 17 - 50456 - 50447
+[2024-07-10 22:27:37] [I] - Edge received packet on time from 9B96-FB17: 18, packet size: 11KB, transmission time: 547ms (regular) - 50456 - 50447
+[2024-07-10 22:27:40] [I] - Edge received packet on time from 9B96-FB17: 19, packet size: 4KB, transmission time: 558ms (regular) - 50456 - 50447
+[2024-07-10 22:27:42] [I] - Edge received packet on time from 9B96-FB17: 20, packet size: 18KB, transmission time: 719ms (regular) - 50456 - 50447
+[2024-07-10 22:27:44] [I] - Edge received packet on time from 9B96-FB17: 21, packet size: 12KB, transmission time: 621ms (regular) - 50456 - 50447
+[2024-07-10 22:27:47] [I] - Edge received packet on time from 9B96-FB17: 22, packet size: 10KB, transmission time: 799ms (regular) - 50456 - 50447
+[2024-07-10 22:27:50] [I] - Edge received packet on time from 9B96-FB17: 23, packet size: 1KB, transmission time: 684ms (regular) - 50456 - 50447
+[2024-07-10 22:27:53] [I] - Edge received packet on time from 9B96-FB17: 24, packet size: 15KB, transmission time: 1281ms (regular) - 50456 - 50447
+[2024-07-10 22:27:57] [I] - Edge received packet on time from 9B96-FB17: 25, packet size: 19KB, transmission time: 1916ms (regular) - 50456 - 50447
+[2024-07-10 22:27:59] [I] - Edge received packet on time from 9B96-FB17: 26, packet size: 16KB, transmission time: 1110ms (regular) - 50456 - 50447
+[2024-07-10 22:28:02] [I] - Edge received packet on time from 9B96-FB17: 27, packet size: 1KB, transmission time: 713ms (regular) - 50456 - 50447
+[2024-07-10 22:28:05] [I] - Edge received packet on time from 9B96-FB17: 28, packet size: 20KB, transmission time: 1714ms (regular) - 50456 - 50447
+[2024-07-10 22:28:11] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 29, transmission time: 3583ms - 50456 - 50447
+[2024-07-10 22:28:12] [W] - Retransmit packet lost for 9B96-FB17: 29 - 50456 - 50447
+[2024-07-10 22:28:14] [I] - Edge received packet on time from 9B96-FB17: 30, packet size: 4KB, transmission time: 684ms (regular) - 50456 - 50447
+[2024-07-10 22:28:17] [I] - Edge received packet on time from 9B96-FB17: 31, packet size: 3KB, transmission time: 480ms (regular) - 50456 - 50447
+[2024-07-10 22:28:19] [I] - Edge received packet on time from 9B96-FB17: 32, packet size: 2KB, transmission time: 548ms (regular) - 50456 - 50447
+[2024-07-10 22:28:23] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 33, transmission time: 2567ms - 50456 - 50447
+[2024-07-10 22:28:28] [W] - Retransmit packet lost for 9B96-FB17: 33 - 50456 - 50447
+[2024-07-10 22:28:30] [I] - Edge received packet on time from 9B96-FB17: 34, packet size: 1KB, transmission time: 439ms (regular) - 50456 - 50447
+[2024-07-10 22:28:34] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 35, transmission time: 2297ms - 50456 - 50447
+[2024-07-10 22:28:35] [I] - Edge received packet on time from 9B96-FB17: 35, packet size: 12KB, transmission time: 3227ms (retransmit) - 50456 - 50447
+[2024-07-10 22:28:38] [I] - Edge received packet on time from 9B96-FB17: 36, packet size: 3KB, transmission time: 702ms (regular) - 50456 - 50447
+[2024-07-10 22:28:41] [I] - Edge received packet on time from 9B96-FB17: 37, packet size: 1KB, transmission time: 1513ms (regular) - 50456 - 50447
+[2024-07-10 22:29:08] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 38, transmission time: 21720ms - 50456 - 50447
+[2024-07-10 22:29:40] [W] - Retransmit packet lost for 9B96-FB17: 38 - 50456 - 50447
+[2024-07-10 22:29:43] [I] - Edge received packet on time from 9B96-FB17: 39, packet size: 17KB, transmission time: 868ms (regular) - 50456 - 50447
+[2024-07-10 22:29:46] [I] - Edge received packet on time from 9B96-FB17: 40, packet size: 2KB, transmission time: 1064ms (regular) - 50456 - 50447
+[2024-07-10 22:29:48] [I] - Edge received packet on time from 9B96-FB17: 41, packet size: 13KB, transmission time: 908ms (regular) - 50456 - 50447
+[2024-07-10 22:29:51] [I] - Edge received packet on time from 9B96-FB17: 42, packet size: 10KB, transmission time: 730ms (regular) - 50456 - 50447
+[2024-07-10 22:29:53] [I] - Edge received packet on time from 9B96-FB17: 43, packet size: 18KB, transmission time: 894ms (regular) - 50456 - 50447
+[2024-07-10 22:29:55] [I] - Edge received packet on time from 9B96-FB17: 44, packet size: 10KB, transmission time: 501ms (regular) - 50456 - 50447
+[2024-07-10 22:29:58] [I] - Edge received packet on time from 9B96-FB17: 45, packet size: 14KB, transmission time: 802ms (regular) - 50456 - 50447
+[2024-07-10 22:30:00] [I] - Edge received packet on time from 9B96-FB17: 46, packet size: 6KB, transmission time: 561ms (regular) - 50456 - 50447
+[2024-07-10 22:30:03] [I] - Edge received packet on time from 9B96-FB17: 47, packet size: 11KB, transmission time: 1026ms (regular) - 50456 - 50447
+[2024-07-10 22:30:05] [I] - Edge received packet on time from 9B96-FB17: 48, packet size: 6KB, transmission time: 709ms (regular) - 50456 - 50447
+[2024-07-10 22:30:08] [I] - Edge received packet on time from 9B96-FB17: 49, packet size: 11KB, transmission time: 724ms (regular) - 50456 - 50447
+[2024-07-10 22:30:36] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 50, transmission time: 26597ms - 50456 - 50447
+[2024-07-10 22:30:36] [W] - Retransmit packet lost for 9B96-FB17: 50 - 50456 - 50447
+[2024-07-10 22:30:39] [I] - Edge received packet on time from 9B96-FB17: 51, packet size: 2KB, transmission time: 403ms (regular) - 50456 - 50447
+[2024-07-10 22:30:41] [I] - Edge received packet on time from 9B96-FB17: 52, packet size: 9KB, transmission time: 546ms (regular) - 50456 - 50447
+[2024-07-10 22:30:43] [I] - Edge received packet on time from 9B96-FB17: 53, packet size: 12KB, transmission time: 885ms (regular) - 50456 - 50447
+[2024-07-10 22:30:46] [I] - Edge received packet on time from 9B96-FB17: 54, packet size: 17KB, transmission time: 764ms (regular) - 50456 - 50447
+[2024-07-10 22:30:48] [I] - Edge received packet on time from 9B96-FB17: 55, packet size: 12KB, transmission time: 479ms (regular) - 50456 - 50447
+[2024-07-10 22:30:50] [I] - Edge received packet on time from 9B96-FB17: 56, packet size: 16KB, transmission time: 772ms (regular) - 50456 - 50447
+[2024-07-10 22:30:53] [I] - Edge received packet on time from 9B96-FB17: 57, packet size: 13KB, transmission time: 796ms (regular) - 50456 - 50447
+[2024-07-10 22:30:55] [I] - Edge received packet on time from 9B96-FB17: 58, packet size: 5KB, transmission time: 568ms (regular) - 50456 - 50447
+[2024-07-10 22:30:57] [I] - Edge received packet on time from 9B96-FB17: 59, packet size: 9KB, transmission time: 689ms (regular) - 50456 - 50447
+[2024-07-10 22:30:59] [I] - Edge received packet on time from 9B96-FB17: 60, packet size: 4KB, transmission time: 527ms (regular) - 50456 - 50447
+[2024-07-10 22:31:02] [I] - Edge received packet on time from 9B96-FB17: 61, packet size: 12KB, transmission time: 655ms (regular) - 50456 - 50447
+[2024-07-10 22:31:04] [I] - Edge received packet on time from 9B96-FB17: 62, packet size: 3KB, transmission time: 522ms (regular) - 50456 - 50447
+[2024-07-10 22:31:06] [I] - Edge received packet on time from 9B96-FB17: 63, packet size: 16KB, transmission time: 582ms (regular) - 50456 - 50447
+[2024-07-10 22:31:08] [I] - Edge received packet on time from 9B96-FB17: 64, packet size: 16KB, transmission time: 521ms (regular) - 50456 - 50447
+[2024-07-10 22:31:11] [I] - Edge received packet on time from 9B96-FB17: 65, packet size: 10KB, transmission time: 513ms (regular) - 50456 - 50447
+[2024-07-10 22:31:13] [I] - Edge received packet on time from 9B96-FB17: 66, packet size: 13KB, transmission time: 572ms (regular) - 50456 - 50447
+[2024-07-10 22:31:15] [I] - Edge received packet on time from 9B96-FB17: 67, packet size: 10KB, transmission time: 607ms (regular) - 50456 - 50447
+[2024-07-10 22:31:17] [I] - Edge received packet on time from 9B96-FB17: 68, packet size: 18KB, transmission time: 685ms (regular) - 50456 - 50447
+[2024-07-10 22:31:20] [I] - Edge received packet on time from 9B96-FB17: 69, packet size: 13KB, transmission time: 543ms (regular) - 50456 - 50447
+[2024-07-10 22:31:22] [I] - Edge received packet on time from 9B96-FB17: 70, packet size: 1KB, transmission time: 439ms (regular) - 50456 - 50447
+[2024-07-10 22:31:24] [I] - Edge received packet on time from 9B96-FB17: 71, packet size: 11KB, transmission time: 517ms (regular) - 50456 - 50447
+[2024-07-10 22:31:26] [I] - Edge received packet on time from 9B96-FB17: 72, packet size: 6KB, transmission time: 591ms (regular) - 50456 - 50447
+[2024-07-10 22:31:28] [I] - Edge received packet on time from 9B96-FB17: 73, packet size: 5KB, transmission time: 404ms (regular) - 50456 - 50447
+[2024-07-10 22:31:30] [I] - Edge received packet on time from 9B96-FB17: 74, packet size: 12KB, transmission time: 678ms (regular) - 50456 - 50447
+[2024-07-10 22:31:33] [I] - Edge received packet on time from 9B96-FB17: 75, packet size: 17KB, transmission time: 622ms (regular) - 50456 - 50447
+[2024-07-10 22:31:35] [I] - Edge received packet on time from 9B96-FB17: 76, packet size: 17KB, transmission time: 463ms (regular) - 50456 - 50447
+[2024-07-10 22:31:37] [I] - Edge received packet on time from 9B96-FB17: 77, packet size: 6KB, transmission time: 400ms (regular) - 50456 - 50447
+[2024-07-10 22:31:39] [I] - Edge received packet on time from 9B96-FB17: 78, packet size: 13KB, transmission time: 778ms (regular) - 50456 - 50447
+[2024-07-10 22:31:42] [I] - Edge received packet on time from 9B96-FB17: 79, packet size: 20KB, transmission time: 632ms (regular) - 50456 - 50447
+[2024-07-10 22:31:44] [I] - Edge received packet on time from 9B96-FB17: 80, packet size: 10KB, transmission time: 597ms (regular) - 50456 - 50447
+[2024-07-10 22:31:46] [I] - Edge received packet on time from 9B96-FB17: 81, packet size: 17KB, transmission time: 647ms (regular) - 50456 - 50447
+[2024-07-10 22:31:48] [I] - Edge received packet on time from 9B96-FB17: 82, packet size: 11KB, transmission time: 472ms (regular) - 50456 - 50447
+[2024-07-10 22:31:51] [I] - Edge received packet on time from 9B96-FB17: 83, packet size: 3KB, transmission time: 553ms (regular) - 50456 - 50447
+[2024-07-10 22:31:53] [I] - Edge received packet on time from 9B96-FB17: 84, packet size: 1KB, transmission time: 394ms (regular) - 50456 - 50447
+[2024-07-10 22:31:55] [I] - Edge received packet on time from 9B96-FB17: 85, packet size: 13KB, transmission time: 648ms (regular) - 50456 - 50447
+[2024-07-10 22:31:57] [I] - Edge received packet on time from 9B96-FB17: 86, packet size: 8KB, transmission time: 525ms (regular) - 50456 - 50447
+[2024-07-10 22:31:59] [I] - Edge received packet on time from 9B96-FB17: 87, packet size: 13KB, transmission time: 449ms (regular) - 50456 - 50447
+[2024-07-10 22:32:02] [I] - Edge received packet on time from 9B96-FB17: 88, packet size: 16KB, transmission time: 586ms (regular) - 50456 - 50447
+[2024-07-10 22:32:04] [I] - Edge received packet on time from 9B96-FB17: 89, packet size: 15KB, transmission time: 774ms (regular) - 50456 - 50447
+[2024-07-10 22:32:06] [I] - Edge received packet on time from 9B96-FB17: 90, packet size: 8KB, transmission time: 614ms (regular) - 50456 - 50447
+[2024-07-10 22:32:08] [I] - Edge received packet on time from 9B96-FB17: 91, packet size: 7KB, transmission time: 670ms (regular) - 50456 - 50447
+[2024-07-10 22:32:11] [I] - Edge received packet on time from 9B96-FB17: 92, packet size: 17KB, transmission time: 605ms (regular) - 50456 - 50447
+[2024-07-10 22:32:13] [I] - Edge received packet on time from 9B96-FB17: 93, packet size: 2KB, transmission time: 590ms (regular) - 50456 - 50447
+[2024-07-10 22:32:15] [I] - Edge received packet on time from 9B96-FB17: 94, packet size: 15KB, transmission time: 681ms (regular) - 50456 - 50447
+[2024-07-10 22:32:18] [I] - Edge received packet on time from 9B96-FB17: 95, packet size: 19KB, transmission time: 625ms (regular) - 50456 - 50447
+[2024-07-10 22:32:20] [I] - Edge received packet on time from 9B96-FB17: 96, packet size: 13KB, transmission time: 584ms (regular) - 50456 - 50447
+[2024-07-10 22:32:22] [I] - Edge received packet on time from 9B96-FB17: 97, packet size: 14KB, transmission time: 528ms (regular) - 50456 - 50447
+[2024-07-10 22:32:24] [I] - Edge received packet on time from 9B96-FB17: 98, packet size: 10KB, transmission time: 407ms (regular) - 50456 - 50447
+[2024-07-10 22:32:26] [I] - Edge received packet on time from 9B96-FB17: 99, packet size: 7KB, transmission time: 480ms (regular) - 50456 - 50447
+[2024-07-10 22:32:28] [I] - Edge received packet on time from 9B96-FB17: 100, packet size: 18KB, transmission time: 460ms (regular) - 50456 - 50447
+[2024-07-10 22:32:30] [I] - Edge received packet on time from 9B96-FB17: 101, packet size: 10KB, transmission time: 451ms (regular) - 50456 - 50447
+[2024-07-10 22:32:33] [I] - Edge received packet on time from 9B96-FB17: 102, packet size: 11KB, transmission time: 472ms (regular) - 50456 - 50447
+[2024-07-10 22:32:35] [I] - Edge received packet on time from 9B96-FB17: 103, packet size: 14KB, transmission time: 612ms (regular) - 50456 - 50447
+[2024-07-10 22:32:37] [I] - Edge received packet on time from 9B96-FB17: 104, packet size: 10KB, transmission time: 634ms (regular) - 50456 - 50447
+[2024-07-10 22:32:39] [I] - Edge received packet on time from 9B96-FB17: 105, packet size: 9KB, transmission time: 589ms (regular) - 50456 - 50447
+[2024-07-10 22:32:42] [I] - Edge received packet on time from 9B96-FB17: 106, packet size: 11KB, transmission time: 1028ms (regular) - 50456 - 50447
+[2024-07-10 22:32:45] [I] - Edge received packet on time from 9B96-FB17: 107, packet size: 14KB, transmission time: 804ms (regular) - 50456 - 50447
+[2024-07-10 22:32:47] [I] - Edge received packet on time from 9B96-FB17: 108, packet size: 8KB, transmission time: 555ms (regular) - 50456 - 50447
+[2024-07-10 22:32:50] [I] - Edge received packet on time from 9B96-FB17: 109, packet size: 19KB, transmission time: 1269ms (regular) - 50456 - 50447
+[2024-07-10 22:32:52] [I] - Edge received packet on time from 9B96-FB17: 110, packet size: 7KB, transmission time: 613ms (regular) - 50456 - 50447
+[2024-07-10 22:32:58] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 111, transmission time: 3945ms - 50456 - 50447
+[2024-07-10 22:32:59] [W] - Retransmit packet lost for 9B96-FB17: 111 - 50456 - 50447
+[2024-07-10 22:33:01] [I] - Edge received packet on time from 9B96-FB17: 112, packet size: 8KB, transmission time: 522ms (regular) - 50456 - 50447
+[2024-07-10 22:33:07] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 113, transmission time: 3801ms - 50456 - 50447
+[2024-07-10 22:33:07] [I] - Edge received packet on time from 9B96-FB17: 113, packet size: 5KB, transmission time: 3973ms (retransmit) - 50456 - 50447
+[2024-07-10 22:33:10] [I] - Edge received packet on time from 9B96-FB17: 114, packet size: 14KB, transmission time: 1255ms (regular) - 50456 - 50447
+[2024-07-10 22:33:13] [I] - Edge received packet on time from 9B96-FB17: 115, packet size: 17KB, transmission time: 1022ms (regular) - 50456 - 50447
+[2024-07-10 22:33:15] [I] - Edge received packet on time from 9B96-FB17: 116, packet size: 2KB, transmission time: 507ms (regular) - 50456 - 50447
+[2024-07-10 22:33:17] [I] - Edge received packet on time from 9B96-FB17: 117, packet size: 12KB, transmission time: 718ms (regular) - 50456 - 50447
+[2024-07-10 22:33:20] [I] - Edge received packet on time from 9B96-FB17: 118, packet size: 8KB, transmission time: 1314ms (regular) - 50456 - 50447
+[2024-07-10 22:33:23] [I] - Edge received packet on time from 9B96-FB17: 119, packet size: 5KB, transmission time: 563ms (regular) - 50456 - 50447
+[2024-07-10 22:33:27] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 120, transmission time: 2729ms - 50456 - 50447
+[2024-07-10 22:33:31] [W] - Retransmit packet lost for 9B96-FB17: 120 - 50456 - 50447
+[2024-07-10 22:33:34] [I] - Edge received packet on time from 9B96-FB17: 121, packet size: 3KB, transmission time: 551ms (regular) - 50456 - 50447
+[2024-07-10 22:33:36] [I] - Edge received packet on time from 9B96-FB17: 122, packet size: 5KB, transmission time: 561ms (regular) - 50456 - 50447
+[2024-07-10 22:33:38] [I] - Edge received packet on time from 9B96-FB17: 123, packet size: 7KB, transmission time: 707ms (regular) - 50456 - 50447
+[2024-07-10 22:33:49] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 124, transmission time: 8970ms - 50456 - 50447
+[2024-07-10 22:33:50] [W] - Retransmit packet lost for 9B96-FB17: 124 - 50456 - 50447
+[2024-07-10 22:33:55] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 125, transmission time: 3035ms - 50456 - 50447
+[2024-07-10 22:33:56] [I] - Edge received packet on time from 9B96-FB17: 125, packet size: 9KB, transmission time: 3842ms (retransmit) - 50456 - 50447
+[2024-07-10 22:33:59] [I] - Edge received packet on time from 9B96-FB17: 126, packet size: 11KB, transmission time: 1737ms (regular) - 50456 - 50447
+[2024-07-10 22:34:02] [I] - Edge received packet on time from 9B96-FB17: 127, packet size: 10KB, transmission time: 646ms (regular) - 50456 - 50447
+[2024-07-10 22:34:04] [I] - Edge received packet on time from 9B96-FB17: 128, packet size: 5KB, transmission time: 583ms (regular) - 50456 - 50447
+[2024-07-10 22:34:06] [I] - Edge received packet on time from 9B96-FB17: 129, packet size: 17KB, transmission time: 709ms (regular) - 50456 - 50447
+[2024-07-10 22:34:09] [I] - Edge received packet on time from 9B96-FB17: 130, packet size: 20KB, transmission time: 769ms (regular) - 50456 - 50447
+[2024-07-10 22:34:11] [I] - Edge received packet on time from 9B96-FB17: 131, packet size: 2KB, transmission time: 627ms (regular) - 50456 - 50447
+[2024-07-10 22:34:14] [I] - Edge received packet on time from 9B96-FB17: 132, packet size: 19KB, transmission time: 1140ms (regular) - 50456 - 50447
+[2024-07-10 22:34:16] [I] - Edge received packet on time from 9B96-FB17: 133, packet size: 14KB, transmission time: 824ms (regular) - 50456 - 50447
+[2024-07-10 22:34:19] [I] - Edge received packet on time from 9B96-FB17: 134, packet size: 1KB, transmission time: 1120ms (regular) - 50456 - 50447
+[2024-07-10 22:34:33] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 135, transmission time: 8092ms - 50456 - 50447
+[2024-07-10 22:34:35] [W] - Retransmit packet lost for 9B96-FB17: 135 - 50456 - 50447
+[2024-07-10 22:34:38] [I] - Edge received packet on time from 9B96-FB17: 136, packet size: 11KB, transmission time: 1961ms (regular) - 50456 - 50447
+[2024-07-10 22:34:42] [I] - Edge received packet on time from 9B96-FB17: 137, packet size: 20KB, transmission time: 1583ms (regular) - 50456 - 50447
+[2024-07-10 22:34:44] [I] - Edge received packet on time from 9B96-FB17: 138, packet size: 13KB, transmission time: 1059ms (regular) - 50456 - 50447
+[2024-07-10 22:34:47] [I] - Edge received packet on time from 9B96-FB17: 139, packet size: 8KB, transmission time: 699ms (regular) - 50456 - 50447
+[2024-07-10 22:34:56] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 140, transmission time: 7359ms - 50456 - 50447
+[2024-07-10 22:34:59] [W] - Retransmit packet lost for 9B96-FB17: 140 - 50456 - 50447
+[2024-07-10 22:35:04] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 141, transmission time: 3250ms - 50456 - 50447
+[2024-07-10 22:35:07] [W] - Retransmit packet lost for 9B96-FB17: 141 - 50456 - 50447
+[2024-07-10 22:36:32] [W] - Edge received timeout, requesting retransmit from 9B96-FB17: 142, transmission time: 83375ms - 50456 - 50447
+[2024-07-10 22:36:32] [W] - Retransmit packet lost for 9B96-FB17: 142 - 50456 - 50447
+[2024-07-10 22:38:30] [I] - Data exported successfully to received_packets_data.csv - 50447 - 50447

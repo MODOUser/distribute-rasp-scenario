@@ -2,16 +2,16 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-09 16:08:16
+ * @LastEditTime: 2024-07-12 09:56:40
  * @FilePath: /distribute-rasp-scenario/test/net/cloud.cc
  * @Description:
  */
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 100;
-const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int NORMAL_TRANSMIT_TIME = 1000;
+const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
 
 std::atomic<bool> keep_running(true);
 
@@ -49,8 +49,8 @@ static void cloud()
             zmq_send_ack(cloud, edge_addr);
 
             std::srand(std::time(nullptr));
-            // 生成 0 到 105 之间的随机毫秒数
-            int randomMilliseconds = std::rand() % 106;
+            // 生成 0.1 到 1 之间的随机毫秒数
+            int randomMilliseconds = 100 + std::rand() % 901;
             std::this_thread::sleep_for(Milliseconds(randomMilliseconds));
 
             send_packet(cloud_send, received_packet);

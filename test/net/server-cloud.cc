@@ -2,16 +2,16 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-09 17:03:49
+ * @LastEditTime: 2024-07-12 09:58:02
  * @FilePath: /distribute-rasp-scenario/test/net/server-cloud.cc
  * @Description:
  */
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 100;
-const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int NORMAL_TRANSMIT_TIME = 1000;
+const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> sample_storage;
 
@@ -130,8 +130,8 @@ static void edge()
             if (sample_storage[received_sample_packet.client_id].find(received_sample_packet.packet_id) == sample_storage[received_sample_packet.client_id].end())
             {
                 std::srand(std::time(nullptr));
-                // 生成 0 到 105 之间的随机毫秒数
-                int randomMilliseconds = std::rand() % 106;
+                // 生成 0.1 到 0.3 之间的随机毫秒数
+                int randomMilliseconds = 100 + std::rand() % 201;
                 std::this_thread::sleep_for(Milliseconds(randomMilliseconds));
                 received_sample_packet.receive_time = now;
                 sample_storage[received_sample_packet.client_id][received_sample_packet.packet_id] = received_sample_packet;

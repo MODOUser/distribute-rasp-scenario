@@ -2,7 +2,7 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:12
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-09 16:04:39
+ * @LastEditTime: 2024-07-12 09:54:13
  * @FilePath: /distribute-rasp-scenario/test/net/client-cloud.cc
  * @Description:
  */
@@ -11,9 +11,9 @@
 #include <thread>
 
 const int MAX_STORAGE_SIZE = 5;
-const int NORMAL_TRANSMIT_TIME = 100;
-const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int NORMAL_TRANSMIT_TIME = 1000;
+const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
 
 std::unordered_map<std::string, std::list<PacketInfo>> packet_storage;
 std::atomic<int> packet_counter(0);
@@ -25,7 +25,7 @@ static void client(int id)
     void *context = zmq_ctx_new();
     void *client = zmq_socket(context, ZMQ_REQ);
     s_set_id(client); // 设置可打印的身份
-    zmq_connect(client, "tcp://192.168.38.183:5672");
+    zmq_connect(client, "tcp://192.168.149.183:5672");
     std::string client_addr = get_identity(client);
     while (keep_running)
     {

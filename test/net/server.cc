@@ -2,16 +2,16 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-09 17:01:21
+ * @LastEditTime: 2024-07-10 22:26:20
  * @FilePath: /distribute-rasp-scenario/test/net/server.cc
  * @Description:
  */
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 100;
-const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
-const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
+const int NORMAL_TRANSMIT_TIME = 1000;
+const int RETRANSMIT_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
+const int LOSS_THRESHOLD = 3 * NORMAL_TRANSMIT_TIME;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage;
 
 std::atomic<bool> keep_running(true);
@@ -61,8 +61,8 @@ static void edge()
             if (received_packet.retransmitted)
             {
                 PacketInfo &packet_info = data_storage[received_packet.client_id][received_packet.packet_id];
-                auto transmission_time = calculate_time_ms(packet_info.receive_time, now);
-                if (transmission_time < LOSS_THRESHOLD)
+                auto transmission_time = calculate_time_ms(packet_info.send_time, now);
+                if (transmission_time < LOSS_THRESHOLD + RETRANSMIT_THRESHOLD)
                 {
                     packet_info.receive_time = now;
                     g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (retransmit)", client_addr, packet_info.packet_id, get_data_size(packet_info), calculate_time_ms(packet_info.send_time, packet_info.receive_time));
