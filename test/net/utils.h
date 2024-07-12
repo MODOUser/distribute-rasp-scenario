@@ -183,7 +183,7 @@ void export_data_to_csv(const std::string &filename, std::unordered_map<std::str
 
     if (!csv_file.is_open())
     {
-        g_logger->error("Failed to open file: {}", filename);
+        g_logger->error("Failed to open file: {}, timestamp: {}", filename, TimePoint_to_timestamp(Clock::now()));
         return;
     }
 
@@ -209,7 +209,7 @@ void export_data_to_csv(const std::string &filename, std::unordered_map<std::str
     }
 
     csv_file.close();
-    g_logger->info("Data exported successfully to {}", filename);
+    g_logger->info("Data exported successfully to {}, timestamp: {}", filename, TimePoint_to_timestamp(Clock::now()));
 }
 
 static size_t write_callback(void *contents, size_t size, size_t nmemb, void *userp)
@@ -277,4 +277,15 @@ double get_data_size(const PacketInfo &packet)
     // 转换为千字节 (KB) 并且直接保留两位小数
     double size_in_KB = size_in_bytes / 1024.0;
     return std::round(size_in_KB * 100.0) / 100.0;
+}
+
+std::string TimePoint_to_timestamp(const TimePoint &tp)
+{
+    // 将时间点转换为毫秒级的时间戳
+    auto milliseconds = std::chrono::duration_cast<Milliseconds>(
+                            tp.time_since_epoch())
+                            .count();
+
+    // 将毫秒时间戳转换为字符串
+    return std::to_string(milliseconds);
 }

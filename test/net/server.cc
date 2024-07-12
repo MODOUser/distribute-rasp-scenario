@@ -2,14 +2,14 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-10 22:26:20
+ * @LastEditTime: 2024-07-12 20:18:28
  * @FilePath: /distribute-rasp-scenario/test/net/server.cc
  * @Description:
  */
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 1000;
+const int NORMAL_TRANSMIT_TIME = 2000;
 const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
 const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage;
@@ -65,12 +65,12 @@ static void edge()
                 if (transmission_time < LOSS_THRESHOLD + RETRANSMIT_THRESHOLD)
                 {
                     packet_info.receive_time = now;
-                    g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (retransmit)", client_addr, packet_info.packet_id, get_data_size(packet_info), calculate_time_ms(packet_info.send_time, packet_info.receive_time));
+                    g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (retransmit), timestamp: {}", client_addr, packet_info.packet_id, get_data_size(packet_info), calculate_time_ms(packet_info.send_time, packet_info.receive_time), TimePoint_to_timestamp(now));
                     zmq_send_ack(frontend, client_addr);
                 }
                 else
                 {
-                    g_logger->warn("Retransmit packet lost for {}: {}", client_addr, packet_info.packet_id);
+                    g_logger->warn("Retransmit packet lost for {}: {}, timestamp: {}", client_addr, packet_info.packet_id, TimePoint_to_timestamp(now));
                     data_storage[packet_info.client_id].erase(packet_info.packet_id);
                     zmq_send_ack(frontend, client_addr);
                 }
@@ -80,12 +80,12 @@ static void edge()
                 auto transmission_time = calculate_time_ms(received_packet.send_time, now);
                 if (transmission_time < RETRANSMIT_THRESHOLD)
                 {
-                    g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular)", client_addr, received_packet.packet_id, get_data_size(received_packet), calculate_time_ms(received_packet.send_time, received_packet.receive_time));
+                    g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular), timestamp: {}", client_addr, received_packet.packet_id, get_data_size(received_packet), calculate_time_ms(received_packet.send_time, received_packet.receive_time), TimePoint_to_timestamp(now));
                     zmq_send_ack(frontend, client_addr);
                 }
                 else
                 {
-                    g_logger->warn("Edge received timeout, requesting retransmit from {}: {}, transmission time: {}ms", client_addr, received_packet.packet_id, calculate_time_ms(received_packet.send_time, received_packet.receive_time));
+                    g_logger->warn("Edge received timeout, requesting retransmit from {}: {}, transmission time: {}ms, timestamp: {}", client_addr, received_packet.packet_id, calculate_time_ms(received_packet.send_time, received_packet.receive_time), TimePoint_to_timestamp(now));
                     data_storage[received_packet.client_id][received_packet.packet_id].retransmitted = true;
                     zmq_request_retransmit(frontend, client_addr, received_packet.packet_id);
                 }

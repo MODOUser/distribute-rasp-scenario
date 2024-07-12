@@ -9,7 +9,7 @@
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 1000;
+const int NORMAL_TRANSMIT_TIME = 2000;
 const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
 const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 
@@ -54,7 +54,7 @@ static void cloud()
             std::this_thread::sleep_for(Milliseconds(randomMilliseconds));
 
             send_packet(cloud_send, received_packet);
-            g_logger->info("Cloud {} sent: sample packet {}", cloud_addr, received_packet.packet_id);
+            g_logger->info("Cloud {} sent: sample packet {}, timestamp: {}", cloud_addr, received_packet.packet_id, TimePoint_to_timestamp(Clock::now()));
 
             //
             // if (received_hash != calculated_hash)
@@ -70,12 +70,12 @@ static void cloud()
                 free(reply);
                 if (reply_str == "OK")
                 {
-                    g_logger->info("Cloud {} received: OK", cloud_addr);
+                    g_logger->info("Cloud {} received: OK, timestamp: {}", cloud_addr, TimePoint_to_timestamp(Clock::now()));
                 }
             }
             else
             {
-                g_logger->error("Cloud {} failed to receive reply", cloud_addr);
+                g_logger->error("Cloud {} failed to receive reply, timestamp: {}", cloud_addr, TimePoint_to_timestamp(Clock::now()));
             }
         }
     }

@@ -2,14 +2,14 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:22
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-12 10:38:51
+ * @LastEditTime: 2024-07-12 20:22:18
  * @FilePath: /distribute-rasp-scenario/test/net/server-cloud.cc
  * @Description:
  */
 #include "lbhelper.h"
 #include "utils.h"
 
-const int NORMAL_TRANSMIT_TIME = 1000;
+const int NORMAL_TRANSMIT_TIME = 2000;
 const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
 const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 std::unordered_map<std::string, std::unordered_map<std::string, PacketInfo>> data_storage;
@@ -76,11 +76,11 @@ static void edge()
             auto transmission_time = calculate_time_ms(packet_info.send_time, packet_info.receive_time);
             if (transmission_time < RETRANSMIT_THRESHOLD)
             {
-                g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular)", client_addr, packet_info.packet_id, get_data_size(packet_info), calculate_time_ms(packet_info.send_time, packet_info.receive_time));
+                g_logger->info("Edge received packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular), timestamp: {}", client_addr, packet_info.packet_id, get_data_size(packet_info), calculate_time_ms(packet_info.send_time, packet_info.receive_time), TimePoint_to_timestamp(now));
             }
             else
             {
-                g_logger->warn("Packet lost for {}: {}", client_addr, packet_info.packet_id);
+                g_logger->warn("Packet lost for {}: {}, timestamp: {}", client_addr, packet_info.packet_id), TimePoint_to_timestamp(now);
                 data_storage[packet_info.client_id].erase(packet_info.packet_id);
             }
             zmq_send_ack(frontend, client_addr);
@@ -93,7 +93,7 @@ static void edge()
 
                 send_packet(edge_send, sample_packet);
                 // 处理新批次号的数据包
-                g_logger->info("Edge {} sent: sample packet {} to cloud", edge_addr, latest_batch_number);
+                g_logger->info("Edge {} sent: sample packet {} to cloud, timestamp: {}", edge_addr, latest_batch_number, TimePoint_to_timestamp(sample_packet.send_time));
                 char *reply = s_recv(edge_send);
                 if (reply)
                 {
@@ -101,12 +101,12 @@ static void edge()
                     free(reply);
                     if (reply_str == "OK")
                     {
-                        g_logger->info("Edge {} received: OK", edge_addr);
+                        g_logger->info("Edge {} received: OK, timestamp: {}", edge_addr, TimePoint_to_timestamp(Clock::now()));
                     }
                 }
                 else
                 {
-                    g_logger->error("Edge {} failed to receive reply", edge_addr);
+                    g_logger->error("Edge {} failed to receive reply, timestamp: {}", edge_addr, TimePoint_to_timestamp(Clock::now()));
                 }
             }
         }
@@ -136,7 +136,7 @@ static void edge()
                 received_sample_packet.receive_time = now;
                 sample_storage[received_sample_packet.client_id][received_sample_packet.packet_id] = received_sample_packet;
             }
-            g_logger->info("Edge {} received sample packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular)", edge_addr, cloud_addr, received_sample_packet.packet_id, get_data_size(received_sample_packet), calculate_time_ms(received_sample_packet.send_time, received_sample_packet.receive_time));
+            g_logger->info("Edge {} received sample packet on time from {}: {}, packet size: {}KB, transmission time: {}ms (regular), timestamp: {}", edge_addr, cloud_addr, received_sample_packet.packet_id, get_data_size(received_sample_packet), calculate_time_ms(received_sample_packet.send_time, received_sample_packet.receive_time), TimePoint_to_timestamp(now));
             zmq_send_ack(backend, cloud_addr);
         }
     }

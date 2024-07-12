@@ -2,7 +2,7 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:12
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-12 10:22:45
+ * @LastEditTime: 2024-07-12 20:24:39
  * @FilePath: /distribute-rasp-scenario/test/net/client.cc
  * @Description:
  */
@@ -11,7 +11,7 @@
 #include <thread>
 
 const int MAX_STORAGE_SIZE = 5;
-const int NORMAL_TRANSMIT_TIME = 1000;
+const int NORMAL_TRANSMIT_TIME = 2000;
 const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
 const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 
@@ -44,7 +44,7 @@ static void client(int id)
 
         // sleep(rand() % 6 + 1);
         send_packet(client, packet);
-        g_logger->info("Client {} sent: packet {}", client_addr, packet.packet_id);
+        g_logger->info("Client {} sent: packet {}, timestamp: {}", client_addr, packet.packet_id, TimePoint_to_timestamp(packet.send_time));
 
         char *reply = s_recv(client);
         if (reply)
@@ -53,7 +53,7 @@ static void client(int id)
             free(reply);
             if (reply_str == "OK")
             {
-                g_logger->info("Client {} received: OK", client_addr);
+                g_logger->info("Client {} received: OK, timestamp: {}", client_addr, TimePoint_to_timestamp(Clock::now()));
             }
             else
             {
@@ -67,28 +67,28 @@ static void client(int id)
                     // 重传数据包
                     it->retransmitted = true;
                     send_packet(client, *it);
-                    g_logger->warn("Client {} retransmitted: packet {}", client_addr, it->packet_id);
+                    g_logger->warn("Client {} retransmitted: packet {}, timestamp: {}", client_addr, it->packet_id, TimePoint_to_timestamp(Clock::now()));
                     char *retransmitted_reply = s_recv(client);
                     std::string retransmitted_reply_str(retransmitted_reply);
                     free(retransmitted_reply);
                     if (retransmitted_reply_str == "OK")
                     {
-                        g_logger->info("Client {} retransmitted received: OK", client_addr);
+                        g_logger->info("Client {} retransmitted received: OK, timestamp: {}", client_addr, TimePoint_to_timestamp(Clock::now()));
                     }
                 }
                 else
                 {
-                    g_logger->warn("Client {} failed to retransmit: packet {} not found, maybe expired", client_addr, packet_id);
+                    g_logger->warn("Client {} failed to retransmit: packet {} not found, maybe expired, timestamp: {}", client_addr, packet_id, TimePoint_to_timestamp(Clock::now()));
                 }
             }
         }
         else
         {
-            g_logger->error("Client {} failed to receive reply", client_addr);
+            g_logger->error("Client {} failed to receive reply, timestamp: {}", client_addr, TimePoint_to_timestamp(Clock::now()));
         }
         sleep(1);
     }
-    g_logger->info("Client {} sent {} packets in total", client_addr, packet_counter);
+    g_logger->info("Client {} sent {} packets in total, timestamp: {}", client_addr, packet_counter, TimePoint_to_timestamp(Clock::now()));
     zmq_close(client);
     zmq_ctx_destroy(context);
 }

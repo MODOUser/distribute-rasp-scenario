@@ -2,7 +2,7 @@
  * @Author: modouer
  * @Date: 2024-06-11 17:24:12
  * @LastEditors: modouer
- * @LastEditTime: 2024-07-12 10:27:58
+ * @LastEditTime: 2024-07-12 20:02:27
  * @FilePath: /distribute-rasp-scenario/test/net/client-cloud.cc
  * @Description:
  */
@@ -11,7 +11,7 @@
 #include <thread>
 
 const int MAX_STORAGE_SIZE = 5;
-const int NORMAL_TRANSMIT_TIME = 1000;
+const int NORMAL_TRANSMIT_TIME = 2000;
 const int RETRANSMIT_THRESHOLD = NORMAL_TRANSMIT_TIME;
 const int LOSS_THRESHOLD = NORMAL_TRANSMIT_TIME;
 
@@ -42,7 +42,7 @@ static void client(int id)
 
         // sleep(rand() % 6 + 1);
         send_packet(client, packet);
-        g_logger->info("Client {} sent: packet {}", client_addr, packet.packet_id);
+        g_logger->info("Client {} sent: packet {}, timestamp: {}", client_addr, packet.packet_id, TimePoint_to_timestamp(packet.send_time));
 
         char *reply = s_recv(client);
         if (reply)
@@ -51,7 +51,7 @@ static void client(int id)
             free(reply);
             if (reply_str == "OK")
             {
-                g_logger->info("Client {} received: OK", client_addr);
+                g_logger->info("Client {} received: OK, timestamp: {}", client_addr, TimePoint_to_timestamp(Clock::now()));
             }
             // else
             // {
@@ -82,11 +82,11 @@ static void client(int id)
         }
         else
         {
-            g_logger->error("Client {} failed to receive reply", client_addr);
+            g_logger->error("Client {} failed to receive reply, timestamp: {}", client_addr, TimePoint_to_timestamp(Clock::now()));
         }
         sleep(1);
     }
-    g_logger->info("Client {} sent {} packets in total", client_addr, packet_counter);
+    g_logger->info("Client {} sent {} packets in total, timestamp: {}", client_addr, packet_counter, TimePoint_to_timestamp(Clock::now()));
     zmq_close(client);
     zmq_ctx_destroy(context);
 }
