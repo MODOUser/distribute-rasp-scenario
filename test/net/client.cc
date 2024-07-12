@@ -26,7 +26,7 @@ static void client(int id)
     void *client = zmq_socket(context, ZMQ_REQ);
     s_set_id(client); // 设置可打印的身份
     // s_set_ipv6(client);
-    zmq_connect(client, "tcp://192.168.149.183:5672");
+    zmq_connect(client, "tcp://192.168.200.183:5672");
     std::string client_addr = get_identity(client);
 
     while (keep_running)
