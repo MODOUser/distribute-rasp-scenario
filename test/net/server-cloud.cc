@@ -80,7 +80,7 @@ static void edge()
             }
             else
             {
-                g_logger->warn("Packet lost for {}: {}, timestamp: {}", client_addr, packet_info.packet_id), TimePoint_to_timestamp(now);
+                g_logger->warn("Packet lost for {}: {}, timestamp: {}", client_addr, packet_info.packet_id, TimePoint_to_timestamp(now));
                 data_storage[packet_info.client_id].erase(packet_info.packet_id);
             }
             zmq_send_ack(frontend, client_addr);
